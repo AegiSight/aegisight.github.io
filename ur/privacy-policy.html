@@ -31,7 +31,7 @@
       <article class="card">
         <div class="pill">عمرہ حج گائیڈ</div>
         <h1>پرائیویسی پالیسی</h1>
-        <p class="muted">آخری تازہ کاری: April 28, 2026</p>
+        <p class="muted">آخری تازہ کاری: April 30, 2026</p>
         <p class="meta"><strong>ڈیولپر:</strong> Lumina Dev<br /><strong>ویب سائٹ:</strong> <a href="https://lumina-dev-lab.github.io/umrah-and-haji/">https://lumina-dev-lab.github.io/umrah-and-haji/</a><br /><strong>رابطہ:</strong> <a href="mailto:machealmaxin83@gmail.com">machealmaxin83@gmail.com</a></p>
         <p>یہ پرائیویسی پالیسی بتاتی ہے کہ عمرہ حج گائیڈ iOS اور Android پر موبائل ایپ استعمال کرتے وقت معلومات کو کیسے سنبھالتا ہے۔ ایپ Lumina Dev نے تیار کی ہے۔</p>
         <h2>1. ہم کون سی معلومات سنبھالتے ہیں</h2>
@@ -42,6 +42,8 @@
           <li>اگر آپ کافی سپورٹ QR ٹرانسفر استعمال کریں تو ایپ QR کوڈ اسکین کرنے کے لیے کیمرہ اجازت مانگ سکتی ہے۔</li>
           <li>اگر آپ ایپ کے اندر خریداری کریں تو ایپ اسٹورز اور خریداری خدمات ٹرانزیکشن معلومات پروسیس کر سکتی ہیں۔ ایپ خریداری بحال یا تصدیق کرنے کے لیے خریداری کی حالت اور گمنام سپورٹر شناخت محفوظ کر سکتی ہے۔</li>
           <li>اشتہاری رضامندی اور اشتہار دکھانے کی معلومات Google AdMob اور Google User Messaging Platform کے ذریعے سنبھالی جا سکتی ہیں جہاں دستیاب ہوں۔</li>
+          <li>Android پر Firebase Analytics ایپ interaction اور device information جمع کر سکتی ہے، جیسے app opens، sessions، device model، operating system، approximate geography، app updates، اور in-app purchase events۔</li>
+          <li>Android پر Firebase Crashlytics crash reports، stack traces، relevant app state، device metadata، Firebase installation identifiers، اور Crashlytics installation identifiers جمع کر سکتی ہے تاکہ crashes اور stability issues diagnose کیے جا سکیں۔</li>
         </ul>
 
         <h2>2. ہم معلومات کیسے استعمال کرتے ہیں</h2>
@@ -51,6 +53,7 @@
           <li>اجازت ملنے پر نقشے، محفوظ جگہیں، آف لائن نقشہ پیک، اور مقام پر مبنی رہنمائی دکھانے کے لیے۔</li>
           <li>ایپ کے اندر خریداری، اشتہارات ہٹانے، کافی سپورٹ ہسٹری، اور اختیاری طور پر سپورٹ ہسٹری کو آلات کے درمیان منتقل کرنے کے لیے۔</li>
           <li>اشتہارات صرف Home اور Map پر دکھانے اور دستیاب رضامندی اختیارات کا احترام کرنے کے لیے۔</li>
+          <li>Android پر Firebase Analytics اور Firebase Crashlytics کے ذریعے عمومی feature usage، app health، stability سمجھنے، اور crashes یا errors diagnose کرنے کے لیے۔</li>
         </ul>
 
         <h2>3. مقامی اسٹوریج</h2>
@@ -58,7 +61,7 @@
 
         <h2>4. تیسرے فریق کی خدمات</h2>
         <ul>
-          <li>ایپ اشتہارات کے لیے Google AdMob، رضامندی اختیارات کے لیے Google User Messaging Platform، نقشوں اور آف لائن نقشہ وسائل کے لیے Mapbox، خریداری کے لیے ایپ اسٹور سسٹمز، اور configured ہونے پر کافی سپورٹ تصدیق اور ٹرانسفر کے لیے REST APIs یا Supabase جیسی اختیاری backend خدمات استعمال کر سکتی ہے۔</li>
+          <li>ایپ اشتہارات کے لیے Google AdMob، رضامندی اختیارات کے لیے Google User Messaging Platform، usage analytics کے لیے Firebase Analytics، crash reporting کے لیے Firebase Crashlytics، نقشوں اور آف لائن نقشہ وسائل کے لیے Mapbox، خریداری کے لیے ایپ اسٹور سسٹمز، اور configured ہونے پر کافی سپورٹ تصدیق اور ٹرانسفر کے لیے REST APIs یا Supabase جیسی اختیاری backend خدمات استعمال کر سکتی ہے۔</li>
           <li>یہ خدمات اپنی پرائیویسی پالیسیوں کے تحت ڈیٹا پروسیس کر سکتی ہیں۔</li>
         </ul>
 
@@ -68,16 +71,19 @@
         <h2>6. اشتہارات</h2>
         <p>اشتہارات Home اور Map پر آ سکتے ہیں، جو غیر مقدس اور غیر active ritual حصے ہیں۔ ایپ active طواف یا سعی کاؤنٹر سیشنز میں اشتہار نہ دکھانے اور ritual flows میں رکاوٹ نہ ڈالنے کے لیے بنائی گئی ہے۔</p>
 
-        <h2>7. بچے</h2>
+        <h2>7. Analytics اور Crash Reporting</h2>
+        <p>Firebase Analytics اور Firebase Crashlytics Android پر عمومی app usage سمجھنے اور reliability بہتر بنانے کے لیے استعمال ہوتے ہیں۔ ہم ان tools کو جان بوجھ کر آپ کے ritual notes، emergency contact details، saved places، medical notes، یا free-form personal content جمع کرنے کے لیے استعمال نہیں کرتے۔ Firebase data کو Google اپنی Google اور Firebase privacy terms اور retention practices کے تحت process کرتا ہے۔</p>
+
+        <h2>8. بچے</h2>
         <p>ایپ خاص طور پر بچوں کے لیے نہیں بنائی گئی۔ اگر آپ سمجھتے ہیں کہ معلومات نامناسب طور پر فراہم کی گئی ہیں تو ہم سے رابطہ کریں۔</p>
 
-        <h2>8. رکھنا اور حذف کرنا</h2>
+        <h2>9. رکھنا اور حذف کرنا</h2>
         <p>مقامی ڈیٹا اس وقت تک رہتا ہے جب تک آپ اسے ایپ میں حذف نہ کریں، آف لائن پیک نہ ہٹائیں، ایپ ڈیٹا صاف نہ کریں، یا ایپ uninstall نہ کریں۔ خریداری ریکارڈز ایپ اسٹورز یا اختیاری backend خدمات بھی اپنی پالیسیوں کے مطابق رکھ سکتی ہیں۔</p>
 
-        <h2>9. تبدیلیاں</h2>
+        <h2>10. تبدیلیاں</h2>
         <p>ہم وقتاً فوقتاً یہ پرائیویسی پالیسی اپ ڈیٹ کر سکتے ہیں۔ تازہ ترین ورژن اس صفحے پر نئی تاریخ کے ساتھ پوسٹ کیا جائے گا۔</p>
 
-        <h2>10. رابطہ</h2>
+        <h2>11. رابطہ</h2>
         <p>پرائیویسی سوالات کے لیے machealmaxin83@gmail.com پر رابطہ کریں۔</p>
         <p class="footer-links"><a href="terms.html">استعمال کی شرائط</a></p>
       </article>
